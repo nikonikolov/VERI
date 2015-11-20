@@ -1,0 +1,264 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# Bad font spec for Editor textFont: t_fixed
+# do counter_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+H:/VERI/counter {H:/VERI/counter/counter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# 
+vsim +altera -do counter_run_msim_rtl_verilog.do -l msim_transcript -gui work.counter
+# vsim +altera -do counter_run_msim_rtl_verilog.do -l msim_transcript -gui work.counter 
+# Loading work.counter
+# do counter_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+H:/VERI/counter {H:/VERI/counter/counter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# 
+add wave -position end  sim:/counter/clock
+add wave -position end  sim:/counter/reset
+add wave -position end  sim:/counter/enable
+add wave -position end  sim:/counter/count
+force /counter/clock 0 0ns, 1 10ns -repeat 20ns
+force /counter/reset 0 0ns, 1 10ns, 0 20ns
+force /counter/enable 0 0ns, 1 30ns
+run 380ns
+restart
+# Loading work.counter
+do ./tb_count.do
+# ** Error: Expected option after '-'
+# ** Error: (vish-4003) Invalid option '-'.
+# Usage: force [-freeze | -drive | -deposit] [-cancel <time>] [-repeat <time>] <object_name> {<value> [[@]<time>[<unit>]]}...
+# Error in macro ././tb_count.do line 5
+# Expected option after '-'
+# ** Error: (vish-4003) Invalid option '-'.
+# Usage: force [-freeze | -drive | -deposit] [-cancel <time>] [-repeat <time>] <object_name> {<value> [[@]<time>[<unit>]]}...
+#     while executing
+# "force /counter/clock  0 0ns, 1 10ns - repeat 20ns"
+do ./tb_count.do
+do ./tb_count.do
+do ./tb_count.do
+step -out
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step -out
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+do ./tb_count.do
+step
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
+step
+# Next activity is in 10 ns.
+# 
+# Next activity is in 10 ns.
+step
+step
+step
+step
