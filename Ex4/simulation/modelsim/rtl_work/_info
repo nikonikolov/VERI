@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\VERI\Ex4\simulation\modelsim
+vcounter2
+!i10b 1
+!s100 O8Im3g?<2j29d?=FaGE=a2
+I[MPaXhEc8EbHafGdkRSf83
+VnGhLGj3Kgbm4je?@agGg=0
+Z1 dH:\VERI\Ex4\simulation\modelsim
+w1448624985
+8H:/VERI/Ex4/counter2.v
+FH:/VERI/Ex4/counter2.v
+L0 8
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1448625214.139000
+!s107 H:/VERI/Ex4/counter2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/Ex4|H:/VERI/Ex4/counter2.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+H:/VERI/Ex4 -O0
