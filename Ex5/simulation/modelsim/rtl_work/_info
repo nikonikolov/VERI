@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\VERI\Ex5\simulation\modelsim
+vclk_div
+I8mDD=DI1CW<<H2oPLhK<b3
+VU;]`HnZJfBL7aKhMZR5_>2
+Z1 dH:\VERI\Ex5\simulation\modelsim
+w1449222785
+8H:/VERI/Ex4/clk_div.v
+FH:/VERI/Ex4/clk_div.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+H:/VERI/Ex4 -O0
+!i10b 1
+!s100 31el9bDbRfF9bIS=B>:]Z3
+!s85 0
+!s108 1449228800.035000
+!s107 H:/VERI/Ex4/clk_div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/Ex4|H:/VERI/Ex4/clk_div.v|
+!s101 -O0
+vhex_to_7seg
+IX2h4^=D<8Q0mH`QgUdEl;2
+VmajmUT@0;iC?5d23GJR[Q1
+R1
+w1448015422
+8H:/VERI/Ex4/hex_to_7seg.v
+FH:/VERI/Ex4/hex_to_7seg.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 f4Ml9Kf`lkbL^F565BmIQ2
+!s85 0
+!s108 1449228800.251000
+!s107 H:/VERI/Ex4/hex_to_7seg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/Ex4|H:/VERI/Ex4/hex_to_7seg.v|
+!s101 -O0
+vshift_pattern
+I2ZO>4Zm_Y4YBQd1B<cSUY0
+VKNRn:Yli`oV6bSTdP<S;R1
+R1
+w1449228704
+8H:/VERI/Ex5/shift_pattern.v
+FH:/VERI/Ex5/shift_pattern.v
+L0 1
+R2
+r1
+31
+R3
+!i10b 1
+!s100 FTHUzRe5<JHC8K]a:ECNa3
+!s85 0
+!s108 1449228800.459000
+!s107 H:/VERI/Ex5/shift_pattern.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/Ex5|H:/VERI/Ex5/shift_pattern.v|
+!s101 -O0
+Z5 !s92 -vlog01compat -work work +incdir+H:/VERI/Ex5 -O0
+vtop
+!i10b 1
+!s100 YhQ:;RJFoeEN;`F15WHUA0
+I413MF35<P`]>z]WX_GZon1
+V4i919UeQ8f7JN[eC08hj?3
+R1
+w1449227581
+8H:/VERI/Ex5/top.v
+FH:/VERI/Ex5/top.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1449228800.669000
+!s107 H:/VERI/Ex5/top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/Ex5|H:/VERI/Ex5/top.v|
+!s101 -O0
+R3
+R5

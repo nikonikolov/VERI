@@ -10,16 +10,16 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+H:/VERI/Ex4 {H:/VERI/Ex4/counter2.v}
+# vlog -vlog01compat -work work +incdir+H:/VERI/Ex4 {H:/VERI/Ex4/clk_div.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module counter2
+# -- Compiling module clk_div
 # 
 # Top level modules:
-# 	counter2
+# 	clk_div
 # 
-vsim +altera -do Ex4_run_msim_rtl_verilog.do -l msim_transcript -gui work.counter2
-# vsim +altera -do Ex4_run_msim_rtl_verilog.do -l msim_transcript -gui work.counter2 
-# Loading work.counter2
+vsim +altera -do Ex4_run_msim_rtl_verilog.do -l msim_transcript -gui work.clk_div
+# vsim +altera -do Ex4_run_msim_rtl_verilog.do -l msim_transcript -gui work.clk_div 
+# Loading work.clk_div
 # do Ex4_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -28,12 +28,31 @@ vsim +altera -do Ex4_run_msim_rtl_verilog.do -l msim_transcript -gui work.counte
 # vmap work rtl_work
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+H:/VERI/Ex4 {H:/VERI/Ex4/counter2.v}
+# vlog -vlog01compat -work work +incdir+H:/VERI/Ex4 {H:/VERI/Ex4/clk_div.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module counter2
+# -- Compiling module clk_div
 # 
 # Top level modules:
-# 	counter2
+# 	clk_div
 # 
-do ./tb_count.do
-do ./tb_count.do
+do tb_clk_div.do
+do tb_clk_div.do
+restart
+# Loading work.clk_div
+do tb_clk_div.do
+restart
+do tb_clk_div.do
+restart
+do tb_clk_div.do
+restart
+do tb_clk_div.do
+# ** Error: Invalid binary digit: 3.
+# ** Error: (vsim-4011) Invalid force value: 3 0ns.
+# Error in macro ./tb_clk_div.do line 6
+# Invalid binary digit: 3.
+# ** Error: (vsim-4011) Invalid force value: 3 0ns.
+# 
+#     while executing
+# "force /clk_div/tc  3 0ns"
+do tb_clk_div.do
+do tb_clk_div.do

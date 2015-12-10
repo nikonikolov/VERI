@@ -1,0 +1,140 @@
+|top
+CLOCK_50 => CLOCK_50.IN1
+HEX0_D[0] <= hex_to_7seg:seg0.port0
+HEX0_D[1] <= hex_to_7seg:seg0.port0
+HEX0_D[2] <= hex_to_7seg:seg0.port0
+HEX0_D[3] <= hex_to_7seg:seg0.port0
+HEX0_D[4] <= hex_to_7seg:seg0.port0
+HEX0_D[5] <= hex_to_7seg:seg0.port0
+HEX0_D[6] <= hex_to_7seg:seg0.port0
+HEX1_D[0] <= hex_to_7seg:seg1.port0
+HEX1_D[1] <= hex_to_7seg:seg1.port0
+HEX1_D[2] <= hex_to_7seg:seg1.port0
+HEX1_D[3] <= hex_to_7seg:seg1.port0
+HEX1_D[4] <= hex_to_7seg:seg1.port0
+HEX1_D[5] <= hex_to_7seg:seg1.port0
+HEX1_D[6] <= hex_to_7seg:seg1.port0
+HEX2_D[0] <= hex_to_7seg:seg2.port0
+HEX2_D[1] <= hex_to_7seg:seg2.port0
+HEX2_D[2] <= hex_to_7seg:seg2.port0
+HEX2_D[3] <= hex_to_7seg:seg2.port0
+HEX2_D[4] <= hex_to_7seg:seg2.port0
+HEX2_D[5] <= hex_to_7seg:seg2.port0
+HEX2_D[6] <= hex_to_7seg:seg2.port0
+
+
+|top|clk_div:div10
+clkin => clkout~reg0.CLK
+clkin => count[0].CLK
+clkin => count[1].CLK
+clkin => count[2].CLK
+clkin => count[3].CLK
+clkin => count[4].CLK
+clkin => count[5].CLK
+clkin => count[6].CLK
+clkin => count[7].CLK
+clkin => count[8].CLK
+clkin => count[9].CLK
+clkin => count[10].CLK
+clkin => count[11].CLK
+clkin => count[12].CLK
+clkin => count[13].CLK
+clkin => count[14].CLK
+clkin => count[15].CLK
+clkin => count[16].CLK
+clkin => count[17].CLK
+clkin => count[18].CLK
+clkin => count[19].CLK
+clkin => count[20].CLK
+clkin => count[21].CLK
+tc[0] => LessThan0.IN22
+tc[1] => LessThan0.IN21
+tc[2] => LessThan0.IN20
+tc[3] => LessThan0.IN19
+tc[4] => LessThan0.IN18
+tc[5] => LessThan0.IN17
+tc[6] => LessThan0.IN16
+tc[7] => LessThan0.IN15
+tc[8] => LessThan0.IN14
+tc[9] => LessThan0.IN13
+tc[10] => LessThan0.IN12
+tc[11] => LessThan0.IN11
+tc[12] => LessThan0.IN10
+tc[13] => LessThan0.IN9
+tc[14] => LessThan0.IN8
+tc[15] => LessThan0.IN7
+tc[16] => LessThan0.IN6
+tc[17] => LessThan0.IN5
+tc[18] => LessThan0.IN4
+tc[19] => LessThan0.IN3
+tc[20] => LessThan0.IN2
+tc[21] => LessThan0.IN1
+clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|shift_pattern:shift
+pattern[0] <= pattern[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pattern[1] <= pattern[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pattern[2] <= pattern[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pattern[3] <= pattern[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pattern[4] <= pattern[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pattern[5] <= pattern[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pattern[6] <= pattern[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pattern[7] <= pattern[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pattern[8] <= pattern[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pattern[9] <= pattern[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => pattern[0]~reg0.CLK
+clk => pattern[1]~reg0.CLK
+clk => pattern[2]~reg0.CLK
+clk => pattern[3]~reg0.CLK
+clk => pattern[4]~reg0.CLK
+clk => pattern[5]~reg0.CLK
+clk => pattern[6]~reg0.CLK
+clk => pattern[7]~reg0.CLK
+clk => pattern[8]~reg0.CLK
+clk => pattern[9]~reg0.CLK
+clk => state.CLK
+
+
+|top|hex_to_7seg:seg2
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|top|hex_to_7seg:seg1
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|top|hex_to_7seg:seg0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+

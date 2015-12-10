@@ -9,8 +9,11 @@ output [6:0] HEX2_D;
 output [6:0] HEX3_D;
 
 wire [15:0] count;
+wire CLOCK_10;
 
-counter count0(CLOCK_50, BUTTON[0], BUTTON[1], count[15:0]);
+clk_div div10(CLOCK_50, 22'd2499999, CLOCK_10);
+
+counter count0(CLOCK_10, BUTTON[0], BUTTON[1], count[15:0]);
 
 hex_to_7seg seg3(HEX3_D, count[15:12]);
 hex_to_7seg seg2(HEX2_D, count[11:8]);

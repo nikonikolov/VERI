@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\VERI\dac_test\simulation\modelsim
+vspi2dac
+!i10b 1
+!s100 FLD9dWgiOVOH8=8lF;kjJ0
+IVNaWaWgm]M>NZLMhSLi;V2
+VCS3i2gdZXl;9f]`<>E:Fl0
+Z1 dH:\VERI\dac_test\simulation\modelsim
+w1391289532
+8H:/VERI/dac_test/spi2dac.v
+FH:/VERI/dac_test/spi2dac.v
+L0 9
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1449763705.258000
+!s107 H:/VERI/dac_test/spi2dac.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/dac_test|H:/VERI/dac_test/spi2dac.v|
+!s101 -O0
+o-vlog01compat -work work -O0
+!s92 -vlog01compat -work work +incdir+H:/VERI/dac_test -O0

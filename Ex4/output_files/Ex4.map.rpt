@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Ex4
-Fri Nov 27 11:51:59 2015
+Fri Dec 04 10:45:16 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -15,8 +15,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+ 10. Port Connectivity Checks: "clk_div:div10"
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -42,16 +44,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 27 11:51:59 2015            ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 04 10:45:16 2015            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; Ex4                                              ;
-; Top-level Entity Name              ; counter2                                         ;
+; Top-level Entity Name              ; top                                              ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; 8                                                ;
-;     Total combinational functions  ; 8                                                ;
-;     Dedicated logic registers      ; 4                                                ;
-; Total registers                    ; 4                                                ;
-; Total pins                         ; 8                                                ;
+; Total logic elements               ; 77                                               ;
+;     Total combinational functions  ; 77                                               ;
+;     Dedicated logic registers      ; 39                                               ;
+; Total registers                    ; 39                                               ;
+; Total pins                         ; 31                                               ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0                                                ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
@@ -65,7 +67,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C8       ;                    ;
-; Top-level entity name                                                      ; counter2           ; Ex4                ;
+; Top-level entity name                                                      ; top                ; Ex4                ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -168,47 +170,56 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ; Library ;
 +----------------------------------+-----------------+------------------------+------------------------------+---------+
-; counter2.v                       ; yes             ; User Verilog HDL File  ; H:/VERI/Ex4/counter2.v       ;         ;
+; hex_to_7seg.v                    ; yes             ; User Verilog HDL File  ; H:/VERI/Ex4/hex_to_7seg.v    ;         ;
+; counter.v                        ; yes             ; User Verilog HDL File  ; H:/VERI/Ex4/counter.v        ;         ;
+; clk_div.v                        ; yes             ; User Verilog HDL File  ; H:/VERI/Ex4/clk_div.v        ;         ;
+; top.v                            ; yes             ; User Verilog HDL File  ; H:/VERI/Ex4/top.v            ;         ;
 +----------------------------------+-----------------+------------------------+------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 8             ;
-;                                             ;               ;
-; Total combinational functions               ; 8             ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 5             ;
-;     -- 3 input functions                    ; 0             ;
-;     -- <=2 input functions                  ; 3             ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 8             ;
-;     -- arithmetic mode                      ; 0             ;
-;                                             ;               ;
-; Total registers                             ; 4             ;
-;     -- Dedicated logic registers            ; 4             ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 8             ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-; Maximum fan-out node                        ; count[0]~reg0 ;
-; Maximum fan-out                             ; 6             ;
-; Total fan-out                               ; 50            ;
-; Average fan-out                             ; 1.79          ;
-+---------------------------------------------+---------------+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Estimated Total logic elements              ; 77                        ;
+;                                             ;                           ;
+; Total combinational functions               ; 77                        ;
+; Logic element usage by number of LUT inputs ;                           ;
+;     -- 4 input functions                    ; 36                        ;
+;     -- 3 input functions                    ; 0                         ;
+;     -- <=2 input functions                  ; 41                        ;
+;                                             ;                           ;
+; Logic elements by mode                      ;                           ;
+;     -- normal mode                          ; 41                        ;
+;     -- arithmetic mode                      ; 36                        ;
+;                                             ;                           ;
+; Total registers                             ; 39                        ;
+;     -- Dedicated logic registers            ; 39                        ;
+;     -- I/O registers                        ; 0                         ;
+;                                             ;                           ;
+; I/O pins                                    ; 31                        ;
+; Embedded Multiplier 9-bit elements          ; 0                         ;
+; Maximum fan-out node                        ; clk_div:div10|LessThan0~8 ;
+; Maximum fan-out                             ; 23                        ;
+; Total fan-out                               ; 415                       ;
+; Average fan-out                             ; 2.33                      ;
++---------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |counter2                  ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |counter2           ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                           ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; |top                       ; 77 (0)            ; 39 (0)       ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |top                  ; work         ;
+;    |clk_div:div10|         ; 32 (32)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:div10    ; work         ;
+;    |counter:count0|        ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|counter:count0   ; work         ;
+;    |hex_to_7seg:seg0|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|hex_to_7seg:seg0 ; work         ;
+;    |hex_to_7seg:seg1|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|hex_to_7seg:seg1 ; work         ;
+;    |hex_to_7seg:seg2|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|hex_to_7seg:seg2 ; work         ;
+;    |hex_to_7seg:seg3|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|hex_to_7seg:seg3 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -217,23 +228,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 39    ;
+; Number of registers using Synchronous Clear  ; 38    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |counter2|count[0]~reg0    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|counter:count0|count[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "clk_div:div10"    ;
++------------+-------+----------+--------------+
+; Port       ; Type  ; Severity ; Details      ;
++------------+-------+----------+--------------+
+; tc[18..17] ; Input ; Info     ; Stuck at VCC ;
+; tc[8..7]   ; Input ; Info     ; Stuck at VCC ;
+; tc[4..0]   ; Input ; Info     ; Stuck at VCC ;
+; tc[20..19] ; Input ; Info     ; Stuck at GND ;
+; tc[16..14] ; Input ; Info     ; Stuck at GND ;
+; tc[12..11] ; Input ; Info     ; Stuck at GND ;
+; tc[6..5]   ; Input ; Info     ; Stuck at GND ;
+; tc[21]     ; Input ; Info     ; Stuck at VCC ;
+; tc[13]     ; Input ; Info     ; Stuck at VCC ;
+; tc[10]     ; Input ; Info     ; Stuck at VCC ;
+; tc[9]      ; Input ; Info     ; Stuck at GND ;
++------------+-------+----------+--------------+
 
 
 +-------------------------------+
@@ -251,29 +281,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Nov 27 11:51:56 2015
+    Info: Processing started: Fri Dec 04 10:45:14 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Ex4 -c Ex4
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file hex_to_7seg.v
     Info (12023): Found entity 1: hex_to_7seg
 Info (12021): Found 1 design units, including 1 entities, in source file counter.v
     Info (12023): Found entity 1: counter
-Info (12021): Found 1 design units, including 1 entities, in source file top.v
-    Info (12023): Found entity 1: top
 Info (12021): Found 1 design units, including 1 entities, in source file counter2.v
     Info (12023): Found entity 1: counter2
-Info (12127): Elaborating entity "counter2" for the top level hierarchy
+Info (12021): Found 1 design units, including 1 entities, in source file clk_div.v
+    Info (12023): Found entity 1: clk_div
+Info (12021): Found 1 design units, including 1 entities, in source file top.v
+    Info (12023): Found entity 1: top
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:div10"
+Warning (10230): Verilog HDL assignment warning at clk_div.v(14): truncated value with size 32 to match size of target (22)
+Info (12128): Elaborating entity "counter" for hierarchy "counter:count0"
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:seg3"
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file H:/VERI/Ex4/output_files/Ex4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 8 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+Info (21057): Implemented 108 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 28 output pins
+    Info (21061): Implemented 77 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 463 megabytes
-    Info: Processing ended: Fri Nov 27 11:51:59 2015
+    Info: Processing ended: Fri Dec 04 10:45:17 2015
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in H:/VERI/Ex4/output_files/Ex4.map.smsg.
 
 

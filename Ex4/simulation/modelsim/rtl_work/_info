@@ -3,23 +3,23 @@ K3
 13
 cModel Technology
 Z0 dH:\VERI\Ex4\simulation\modelsim
-vcounter2
+vclk_div
 !i10b 1
-!s100 O8Im3g?<2j29d?=FaGE=a2
-I[MPaXhEc8EbHafGdkRSf83
-VnGhLGj3Kgbm4je?@agGg=0
+!s100 31el9bDbRfF9bIS=B>:]Z3
+I8mDD=DI1CW<<H2oPLhK<b3
+VU;]`HnZJfBL7aKhMZR5_>2
 Z1 dH:\VERI\Ex4\simulation\modelsim
-w1448624985
-8H:/VERI/Ex4/counter2.v
-FH:/VERI/Ex4/counter2.v
-L0 8
+w1449222785
+8H:/VERI/Ex4/clk_div.v
+FH:/VERI/Ex4/clk_div.v
+L0 1
 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1448625214.139000
-!s107 H:/VERI/Ex4/counter2.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/Ex4|H:/VERI/Ex4/counter2.v|
+!s108 1449223763.253000
+!s107 H:/VERI/Ex4/clk_div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/Ex4|H:/VERI/Ex4/clk_div.v|
 !s101 -O0
 o-vlog01compat -work work -O0
 !s92 -vlog01compat -work work +incdir+H:/VERI/Ex4 -O0
