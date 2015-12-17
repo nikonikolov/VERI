@@ -1,0 +1,17 @@
+module test_ROM(CLOCK_50, SW, HEX0_D, HEX1_D, HEX2_D);
+	
+	input CLOCK_50;
+	input [9:0] SW;
+	output [6:0] HEX0_D;
+	output [6:0] HEX1_D;
+	output [6:0] HEX2_D;
+	
+	wire [9:0] rom_out;
+
+	ROM top_rom(SW[9:0], CLOCK_50, rom_out[9:0]);
+	
+	hex_to_7seg H0(HEX0_D, rom_out[3:0]);
+	hex_to_7seg H1(HEX1_D, rom_out[7:4]);
+	hex_to_7seg H2(HEX2_D, {2'b0, rom_out[9:8]});
+	
+endmodule

@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -2.499
+TNS   : -55.368
+
+Type  : Slow 1200mV 85C Model Setup 'spi2dac:top_spi2dac|clk_1MHz'
+Slack : -1.107
+TNS   : -17.330
+
+Type  : Slow 1200mV 85C Model Setup 'clk_div:top_clk_div|clkout'
+Slack : 0.318
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -0.215
+TNS   : -0.215
+
+Type  : Slow 1200mV 85C Model Hold 'spi2dac:top_spi2dac|clk_1MHz'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_div:top_clk_div|clkout'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -38.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'spi2dac:top_spi2dac|clk_1MHz'
+Slack : -1.000
+TNS   : -21.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_div:top_clk_div|clkout'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.161
+TNS   : -46.289
+
+Type  : Slow 1200mV 0C Model Setup 'spi2dac:top_spi2dac|clk_1MHz'
+Slack : -0.892
+TNS   : -13.222
+
+Type  : Slow 1200mV 0C Model Setup 'clk_div:top_clk_div|clkout'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.208
+TNS   : -0.208
+
+Type  : Slow 1200mV 0C Model Hold 'spi2dac:top_spi2dac|clk_1MHz'
+Slack : 0.238
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_div:top_clk_div|clkout'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -38.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'spi2dac:top_spi2dac|clk_1MHz'
+Slack : -1.000
+TNS   : -21.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_div:top_clk_div|clkout'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.979
+TNS   : -18.114
+
+Type  : Fast 1200mV 0C Model Setup 'spi2dac:top_spi2dac|clk_1MHz'
+Slack : -0.151
+TNS   : -1.174
+
+Type  : Fast 1200mV 0C Model Setup 'clk_div:top_clk_div|clkout'
+Slack : 0.626
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.238
+TNS   : -0.373
+
+Type  : Fast 1200mV 0C Model Hold 'spi2dac:top_spi2dac|clk_1MHz'
+Slack : 0.058
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_div:top_clk_div|clkout'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -40.238
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'spi2dac:top_spi2dac|clk_1MHz'
+Slack : -1.000
+TNS   : -21.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_div:top_clk_div|clkout'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

@@ -3,23 +3,23 @@ K3
 13
 cModel Technology
 Z0 dH:\VERI\dac_test\simulation\modelsim
-vspi2dac
+vpulse_gen
 !i10b 1
-!s100 FLD9dWgiOVOH8=8lF;kjJ0
-IVNaWaWgm]M>NZLMhSLi;V2
-VCS3i2gdZXl;9f]`<>E:Fl0
+!s100 fo?3Y4<N<dZ;^A03^7Dg<3
+IUk;BQ_OTaIW=Fg@^e0bk:1
+V5P102?n7:Y>;<X2af=MNM3
 Z1 dH:\VERI\dac_test\simulation\modelsim
-w1391289532
-8H:/VERI/dac_test/spi2dac.v
-FH:/VERI/dac_test/spi2dac.v
-L0 9
+w1449830025
+8H:/VERI/dac_test/pulse_gen.v
+FH:/VERI/dac_test/pulse_gen.v
+L0 1
 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1449763705.258000
-!s107 H:/VERI/dac_test/spi2dac.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/dac_test|H:/VERI/dac_test/spi2dac.v|
+!s108 1449830060.135000
+!s107 H:/VERI/dac_test/pulse_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+H:/VERI/dac_test|H:/VERI/dac_test/pulse_gen.v|
 !s101 -O0
 o-vlog01compat -work work -O0
 !s92 -vlog01compat -work work +incdir+H:/VERI/dac_test -O0

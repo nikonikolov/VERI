@@ -10,40 +10,20 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+H:/VERI/dac_test {H:/VERI/dac_test/spi2dac.v}
+# vlog -vlog01compat -work work +incdir+H:/VERI/dac_test {H:/VERI/dac_test/pulse_gen.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module spi2dac
+# -- Compiling module pulse_gen
 # 
 # Top level modules:
-# 	spi2dac
+# 	pulse_gen
 # 
-vsim +altera -do dac_test_run_msim_rtl_verilog.do -l msim_transcript -gui work.spi2dac
-# vsim +altera -do dac_test_run_msim_rtl_verilog.do -l msim_transcript -gui work.spi2dac 
-# Loading work.spi2dac
-# do dac_test_run_msim_rtl_verilog.do 
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vlog -vlog01compat -work work +incdir+H:/VERI/dac_test {H:/VERI/dac_test/spi2dac.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module spi2dac
-# 
-# Top level modules:
-# 	spi2dac
-# 
-./
-# invalid command name "./"
-
-pwd
-# H:/VERI/dac_test/simulation/modelsim
-do ./tb_count.do
-do ./tb_count.do
-restart
-# Loading work.spi2dac
-do ./tb_count.do
-restart
-do ./tb_count.do
+vsim work.pulse_gen
+# vsim work.pulse_gen 
+# Loading work.pulse_gen
+add wave -position end  sim:/pulse_gen/trigger
+add wave -position end  sim:/pulse_gen/clk
+add wave -position end  sim:/pulse_gen/pulse_out
+add wave -position end  sim:/pulse_gen/state
+force /pulse_gen/clk 0 0ns, 1 10ns -repeat 20ns
+force /pulse_gen/trigger 0 0ns, 1 44ns -repeat 88ns
+run 380ns

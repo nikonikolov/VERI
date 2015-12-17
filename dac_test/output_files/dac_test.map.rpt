@@ -1,5 +1,5 @@
-Analysis & Elaboration report for dac_test
-Thu Dec 10 16:04:22 2015
+Analysis & Synthesis report for dac_test
+Fri Dec 11 11:24:34 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -7,11 +7,25 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |spi2dac
-  5. Analysis & Elaboration Settings
-  6. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top|spi2dac:top_spi2dac|sr_state
+  9. State Machine - |top|pulse_gen:top_pulse_gen|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |top
+ 15. Parameter Settings for User Entity Instance: pulse_gen:top_pulse_gen
+ 16. Parameter Settings for User Entity Instance: spi2dac:top_spi2dac
+ 17. Port Connectivity Checks: "clk_div:top_clk_div"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -35,65 +49,32 @@ applicable agreement for further details.
 
 
 +---------------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                        ;
+; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Thu Dec 10 16:04:22 2015            ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 11 11:24:34 2015            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; dac_test                                         ;
-; Top-level Entity Name              ; spi2dac                                          ;
+; Top-level Entity Name              ; top                                              ;
 ; Family                             ; Cyclone III                                      ;
-; Total logic elements               ; N/A until Partition Merge                        ;
-;     Total combinational functions  ; N/A until Partition Merge                        ;
-;     Dedicated logic registers      ; N/A until Partition Merge                        ;
-; Total registers                    ; N/A until Partition Merge                        ;
-; Total pins                         ; N/A until Partition Merge                        ;
-; Total virtual pins                 ; N/A until Partition Merge                        ;
-; Total memory bits                  ; N/A until Partition Merge                        ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                        ;
-; Total PLLs                         ; N/A until Partition Merge                        ;
+; Total logic elements               ; 71                                               ;
+;     Total combinational functions  ; 70                                               ;
+;     Dedicated logic registers      ; 56                                               ;
+; Total registers                    ; 56                                               ;
+; Total pins                         ; 15                                               ;
+; Total virtual pins                 ; 0                                                ;
+; Total memory bits                  ; 0                                                ;
+; Embedded Multiplier 9-bit elements ; 0                                                ;
+; Total PLLs                         ; 0                                                ;
 +------------------------------------+--------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |spi2dac ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; BUF            ; 1     ; Unsigned Binary                                ;
-; GA_N           ; 0     ; Unsigned Binary                                ;
-; SHDN_N         ; 1     ; Unsigned Binary                                ;
-; TIME_CONSTANT  ; 11000 ; Unsigned Binary                                ;
-; IDLE           ; 00    ; Unsigned Binary                                ;
-; WAIT_CSB_FALL  ; 01    ; Unsigned Binary                                ;
-; WAIT_CSB_HIGH  ; 10    ; Unsigned Binary                                ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                      ;
+; Analysis & Synthesis Settings                                                                                        ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C8       ;                    ;
-; Top-level entity name                                                      ; spi2dac            ; dac_test           ;
+; Top-level entity name                                                      ; top                ; dac_test           ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -174,22 +155,248 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                               ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+; clk_div.v                        ; yes             ; User Verilog HDL File  ; H:/VERI/dac_test/clk_div.v   ;         ;
+; spi2dac.v                        ; yes             ; User Verilog HDL File  ; H:/VERI/dac_test/spi2dac.v   ;         ;
+; pulse_gen.v                      ; yes             ; User Verilog HDL File  ; H:/VERI/dac_test/pulse_gen.v ;         ;
+; top.v                            ; yes             ; User Verilog HDL File  ; H:/VERI/dac_test/top.v       ;         ;
++----------------------------------+-----------------+------------------------+------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 71             ;
+;                                             ;                ;
+; Total combinational functions               ; 70             ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 21             ;
+;     -- 3 input functions                    ; 12             ;
+;     -- <=2 input functions                  ; 37             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 41             ;
+;     -- arithmetic mode                      ; 29             ;
+;                                             ;                ;
+; Total registers                             ; 56             ;
+;     -- Dedicated logic registers            ; 56             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 15             ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 35             ;
+; Total fan-out                               ; 349            ;
+; Average fan-out                             ; 2.24           ;
++---------------------------------------------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+; |top                         ; 70 (0)            ; 56 (0)       ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |top                         ; work         ;
+;    |clk_div:top_clk_div|     ; 30 (30)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|clk_div:top_clk_div     ; work         ;
+;    |pulse_gen:top_pulse_gen| ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|pulse_gen:top_pulse_gen ; work         ;
+;    |spi2dac:top_spi2dac|     ; 39 (39)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|spi2dac:top_spi2dac     ; work         ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------+
+; State Machine - |top|spi2dac:top_spi2dac|sr_state                                        ;
++------------------------+---------------+------------------------+------------------------+
+; Name                   ; sr_state.IDLE ; sr_state.WAIT_CSB_HIGH ; sr_state.WAIT_CSB_FALL ;
++------------------------+---------------+------------------------+------------------------+
+; sr_state.IDLE          ; 0             ; 0                      ; 0                      ;
+; sr_state.WAIT_CSB_FALL ; 1             ; 0                      ; 1                      ;
+; sr_state.WAIT_CSB_HIGH ; 1             ; 1                      ; 0                      ;
++------------------------+---------------+------------------------+------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------+
+; State Machine - |top|pulse_gen:top_pulse_gen|state ;
++----------------+-----------------------------------+
+; Name           ; state.WAIT_LOW                    ;
++----------------+-----------------------------------+
+; state.IDLE     ; 0                                 ;
+; state.WAIT_LOW ; 1                                 ;
++----------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; spi2dac:top_spi2dac|shift_reg[0,1]    ; Stuck at GND due to stuck port data_in ;
+; pulse_gen:top_pulse_gen|state~3       ; Lost fanout                            ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                           ;
++----------------------------------+---------------------------+----------------------------------------+
+; Register name                    ; Reason for Removal        ; Registers Removed due to This Register ;
++----------------------------------+---------------------------+----------------------------------------+
+; spi2dac:top_spi2dac|shift_reg[0] ; Stuck at GND              ; spi2dac:top_spi2dac|shift_reg[1]       ;
+;                                  ; due to stuck port data_in ;                                        ;
++----------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 56    ;
+; Number of registers using Synchronous Clear  ; 27    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; spi2dac:top_spi2dac|dac_cs             ; 20      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top ;
++----------------+------------------------+---------------------------+
+; Parameter Name ; Value                  ; Type                      ;
++----------------+------------------------+---------------------------+
+; TC             ; 0000000000100111000011 ; Unsigned Binary           ;
++----------------+------------------------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pulse_gen:top_pulse_gen ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; IDLE           ; 0     ; Unsigned Binary                             ;
+; WAIT_LOW       ; 1     ; Unsigned Binary                             ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: spi2dac:top_spi2dac ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; BUF            ; 1     ; Unsigned Binary                         ;
+; GA_N           ; 0     ; Unsigned Binary                         ;
+; SHDN_N         ; 1     ; Unsigned Binary                         ;
+; TIME_CONSTANT  ; 11000 ; Unsigned Binary                         ;
+; IDLE           ; 00    ; Unsigned Binary                         ;
+; WAIT_CSB_FALL  ; 01    ; Unsigned Binary                         ;
+; WAIT_CSB_HIGH  ; 10    ; Unsigned Binary                         ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "clk_div:top_clk_div" ;
++------------+-------+----------+-----------------+
+; Port       ; Type  ; Severity ; Details         ;
++------------+-------+----------+-----------------+
+; tc[8..6]   ; Input ; Info     ; Stuck at VCC    ;
+; tc[1..0]   ; Input ; Info     ; Stuck at VCC    ;
+; tc[21..12] ; Input ; Info     ; Stuck at GND    ;
+; tc[10..9]  ; Input ; Info     ; Stuck at GND    ;
+; tc[5..2]   ; Input ; Info     ; Stuck at GND    ;
+; tc[11]     ; Input ; Info     ; Stuck at VCC    ;
++------------+-------+----------+-----------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Elaboration
+Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Dec 10 16:04:21 2015
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dac_test -c dac_test --analysis_and_elaboration
+    Info: Processing started: Fri Dec 11 11:24:31 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dac_test -c dac_test
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file clk_div.v
+    Info (12023): Found entity 1: clk_div
 Info (12021): Found 1 design units, including 1 entities, in source file spi2dac.v
     Info (12023): Found entity 1: spi2dac
-Info (12127): Elaborating entity "spi2dac" for the top level hierarchy
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 428 megabytes
-    Info: Processing ended: Thu Dec 10 16:04:23 2015
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:00
+Info (12021): Found 1 design units, including 1 entities, in source file pulse_gen.v
+    Info (12023): Found entity 1: pulse_gen
+Info (12021): Found 1 design units, including 1 entities, in source file top.v
+    Info (12023): Found entity 1: top
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:top_clk_div"
+Warning (10230): Verilog HDL assignment warning at clk_div.v(14): truncated value with size 32 to match size of target (22)
+Info (12128): Elaborating entity "pulse_gen" for hierarchy "pulse_gen:top_pulse_gen"
+Info (12128): Elaborating entity "spi2dac" for hierarchy "spi2dac:top_spi2dac"
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file H:/VERI/dac_test/output_files/dac_test.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 71 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 464 megabytes
+    Info: Processing ended: Fri Dec 11 11:24:35 2015
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in H:/VERI/dac_test/output_files/dac_test.map.smsg.
 
 

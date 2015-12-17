@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Dec 11 13:35:14 2015
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : Ex9
+Top-level Entity Name : test_ROM
+Family : Cyclone III
+Total logic elements : 17
+    Total combinational functions : 17
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 32
+Total virtual pins : 0
+Total memory bits : 10,240
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

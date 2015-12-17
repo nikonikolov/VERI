@@ -1,4 +1,80 @@
-|spi2dac
+|top
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => SW[8].IN1
+SW[9] => SW[9].IN1
+CLOCK_50 => CLOCK_50.IN3
+DAC_CS <= spi2dac:top_spi2dac.port4
+DAC_SDI <= spi2dac:top_spi2dac.port3
+DAC_LD <= spi2dac:top_spi2dac.port6
+SCK <= spi2dac:top_spi2dac.port5
+
+
+|top|clk_div:top_clk_div
+clkin => clkout~reg0.CLK
+clkin => count[0].CLK
+clkin => count[1].CLK
+clkin => count[2].CLK
+clkin => count[3].CLK
+clkin => count[4].CLK
+clkin => count[5].CLK
+clkin => count[6].CLK
+clkin => count[7].CLK
+clkin => count[8].CLK
+clkin => count[9].CLK
+clkin => count[10].CLK
+clkin => count[11].CLK
+clkin => count[12].CLK
+clkin => count[13].CLK
+clkin => count[14].CLK
+clkin => count[15].CLK
+clkin => count[16].CLK
+clkin => count[17].CLK
+clkin => count[18].CLK
+clkin => count[19].CLK
+clkin => count[20].CLK
+clkin => count[21].CLK
+tc[0] => LessThan0.IN22
+tc[1] => LessThan0.IN21
+tc[2] => LessThan0.IN20
+tc[3] => LessThan0.IN19
+tc[4] => LessThan0.IN18
+tc[5] => LessThan0.IN17
+tc[6] => LessThan0.IN16
+tc[7] => LessThan0.IN15
+tc[8] => LessThan0.IN14
+tc[9] => LessThan0.IN13
+tc[10] => LessThan0.IN12
+tc[11] => LessThan0.IN11
+tc[12] => LessThan0.IN10
+tc[13] => LessThan0.IN9
+tc[14] => LessThan0.IN8
+tc[15] => LessThan0.IN7
+tc[16] => LessThan0.IN6
+tc[17] => LessThan0.IN5
+tc[18] => LessThan0.IN4
+tc[19] => LessThan0.IN3
+tc[20] => LessThan0.IN2
+tc[21] => LessThan0.IN1
+clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|pulse_gen:top_pulse_gen
+trigger => pulse_out.DATAB
+trigger => state.WAIT_LOW.DATAIN
+trigger => state.IDLE.DATAIN
+clk => pulse_out~reg0.CLK
+clk => state~1.DATAIN
+pulse_out <= pulse_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|spi2dac:top_spi2dac
 sysclk => dac_start.CLK
 sysclk => clk_1MHz.CLK
 sysclk => ctr[0].CLK

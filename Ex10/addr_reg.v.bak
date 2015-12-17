@@ -1,0 +1,11 @@
+module addr_reg(D, Q, CLK);
+
+	input CLK;
+	input [9:0] D;
+	output [9:0] Q;
+
+	always@(posedge CLK)begin
+		
+	end
+endmodule
+	
