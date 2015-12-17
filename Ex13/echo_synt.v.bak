@@ -1,0 +1,41 @@
+module echosynt(input CLOCK_50, input data_valid, 
+			input [9:0] data_in, output [9:0] data_out);
+			
+	parameter 		ADC_OFFSET = 10'h181;
+	parameter 		DAC_OFFSET = 10'h200;
+	parameter		beta = 3'd4;
+	
+	wire [9:0]		x,y, FIFO_OUT, ATTENUATED;
+	wire rdreq_sum, data_valid_out, D_FF;
+	reg Q_FF;
+	
+	pulse_gen(.pulse(data_valid_out), .in(data_valid), .clk(CLOCK_50));
+	
+	assign x = data_in[9:0] - ADC_OFFSET;		// x is input in 2's complement
+	
+	assign rdreq_sum = data_valid_out && Q_FF;
+	
+	// Flip-Flop
+	always@(posedge CLOCK_50) begin
+		Q_FF <= D_FF;
+	end
+	
+	// FIFO block
+	FIFO fifo_top(
+	.clock(CLOCK_50),
+	.data(x[9:0]),
+	.rdreq(rdreq_sum),
+	.wrreq(data_valid_out),
+	.full(D_FF),
+	.q(FIFO_OUT));
+	
+	// Attenuate Signal
+	assign ATTENUATED = {2'b0, (FIFO_OUT >> beta)[7:0]};
+	
+	// Add Echo and Original Signal Together
+	assign y = ATTENUATED + x;
+	
+	// Convert signal to DAC range
+	assign data_out =  y + DAC_OFFSET;
+		
+endmodule

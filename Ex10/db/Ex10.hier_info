@@ -1257,16 +1257,6 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CLK => Q[0]~reg0.CLK
-CLK => Q[1]~reg0.CLK
-CLK => Q[2]~reg0.CLK
-CLK => Q[3]~reg0.CLK
-CLK => Q[4]~reg0.CLK
-CLK => Q[5]~reg0.CLK
-CLK => Q[6]~reg0.CLK
-CLK => Q[7]~reg0.CLK
-CLK => Q[8]~reg0.CLK
-CLK => Q[9]~reg0.CLK
 CLK => D[0].CLK
 CLK => D[1].CLK
 CLK => D[2].CLK
@@ -1277,6 +1267,16 @@ CLK => D[6].CLK
 CLK => D[7].CLK
 CLK => D[8].CLK
 CLK => D[9].CLK
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLK => Q[4]~reg0.CLK
+CLK => Q[5]~reg0.CLK
+CLK => Q[6]~reg0.CLK
+CLK => Q[7]~reg0.CLK
+CLK => Q[8]~reg0.CLK
+CLK => Q[9]~reg0.CLK
 
 
 |top|ROM:top_rom

@@ -8,8 +8,8 @@ module addr_reg(SW, Q, CLK);
 	
 	initial Q = 10'b0;
 	always@(posedge CLK)begin
-		D[9:0] <= SW[9:0] + Q[9:0];
-		Q[9:0] <= D[9:0];
+		Q[9:0] = D[9:0];
+		D[9:0] = SW[9:0] + Q[9:0];		
 	end
 endmodule
 	

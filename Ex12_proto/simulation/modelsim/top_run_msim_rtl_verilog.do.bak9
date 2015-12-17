@@ -1,0 +1,14 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+Z:/Dropbox/_My\ Documents/E2\ Digital/tone_gen {Z:/Dropbox/_My Documents/E2 Digital/tone_gen/spi2dac.v}
+vlog -vlog01compat -work work +incdir+Z:/Dropbox/_My\ Documents/E2\ Digital/tone_gen {Z:/Dropbox/_My Documents/E2 Digital/tone_gen/top.v}
+vlog -vlog01compat -work work +incdir+Z:/Dropbox/_My\ Documents/E2\ Digital/tone_gen {Z:/Dropbox/_My Documents/E2 Digital/tone_gen/div2.v}
+vlog -vlog01compat -work work +incdir+Z:/Dropbox/_My\ Documents/E2\ Digital/tone_gen {Z:/Dropbox/_My Documents/E2 Digital/tone_gen/square_1k.v}
+vlog -vlog01compat -work work +incdir+Z:/Dropbox/_My\ Documents/E2\ Digital/tone_gen {Z:/Dropbox/_My Documents/E2 Digital/tone_gen/mux_10.v}
+vlog -vlog01compat -work work +incdir+Z:/Dropbox/_My\ Documents/E2\ Digital/tone_gen {Z:/Dropbox/_My Documents/E2 Digital/tone_gen/edge_detect.v}
+

@@ -1,0 +1,193 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+10
+770
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+top
+# storage
+db|top.(0).cnf
+db|top.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+top.v
+fc754ac872aa1ea3c92f8cd5d32f31
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+debounce_oneshot
+# storage
+db|top.(1).cnf
+db|top.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+debounce_oneshot.v
+8acc8e3ca7a9ceda852de6a33dcbf44c
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+counter_max
+000011000011010100000
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+debounce_oneshot:BUT1
+debounce_oneshot:BUT2
+}
+# macro_sequence
+
+# end
+# entity
+div50
+# storage
+db|top.(2).cnf
+db|top.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+clock_divider.v
+c7fcf6988f828b2bcaf2cd41fa41a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+time_constant
+11000
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+div50:CLKDIV
+}
+# macro_sequence
+
+# end
+# entity
+spi2dac
+# storage
+db|top.(3).cnf
+db|top.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+spi2dac.v
+84ff9ea28048dae24454bf134444598
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+BUF
+1
+PARAMETER_UNSIGNED_BIN
+DEF
+GA_N
+1
+PARAMETER_UNSIGNED_BIN
+DEF
+SHDN_N
+1
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+spi2dac:SPI_1
+}
+# macro_sequence
+
+# end
+# complete
+

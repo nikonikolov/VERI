@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Ex13">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|processor:ECHO_SYNT|FIFO:fifo_top|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_gj21.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
